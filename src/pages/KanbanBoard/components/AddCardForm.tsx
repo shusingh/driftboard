@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Input, Button } from "@heroui/react";
+import { Input } from "@heroui/input";
+import { Button } from "@heroui/button";
 import { Plus } from "lucide-react";
 
 interface AddCardFormProps {

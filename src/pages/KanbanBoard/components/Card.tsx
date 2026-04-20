@@ -1,9 +1,10 @@
 import type { CardType } from "@/types/board";
 import { Draggable } from "@hello-pangea/dnd";
-import { useDisclosure } from "@heroui/react";
+import { useDisclosure } from "@heroui/use-disclosure";
 import { Card as HUICard, CardBody } from "@heroui/card";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@heroui/dropdown";
-import { Button, Input } from "@heroui/react";
+import { Button } from "@heroui/button";
+import { Input } from "@heroui/input";
 import { MoreVertical, Trash2, Pencil, X, Check } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ConfirmationModal from "@/components/ConfirmationModal";

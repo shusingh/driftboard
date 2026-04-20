@@ -1,7 +1,8 @@
 import type { BoardType, CardType } from "@/types/board";
 import { useState, useEffect } from "react";
 import { DragDropContext, DropResult } from "@hello-pangea/dnd";
-import { Button, useDisclosure } from "@heroui/react";
+import { Button } from "@heroui/button";
+import { useDisclosure } from "@heroui/use-disclosure";
 import { Trash2 } from "lucide-react";
 import Column from "./components/Column";
 import LoadingOverlay from "./components/LoadingOverlay";
