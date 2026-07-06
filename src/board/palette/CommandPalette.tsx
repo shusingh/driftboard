@@ -23,10 +23,10 @@ export function CommandPalette() {
   const toggleFocus = useUiStore(state => state.toggleFocus);
   const toggleDensity = useUiStore(state => state.toggleDensity);
   const selectCard = useUiStore(state => state.selectCard);
+  const setConfirmClearOpen = useUiStore(state => state.setConfirmClearOpen);
 
   const board = useBoardStore(state => state.board);
   const addCard = useBoardStore(state => state.addCard);
-  const clearBoard = useBoardStore(state => state.clearBoard);
   const replaceBoard = useBoardStore(state => state.replaceBoard);
 
   const fileRef = useRef<HTMLInputElement>(null);
@@ -76,7 +76,7 @@ export function CommandPalette() {
     { icon: Redo2, label: "Redo", hint: "⇧⌘Z", onRun: redoBoard },
     { icon: Download, label: "Export board as JSON", hint: "E", onRun: () => downloadBoard(board) },
     { icon: Upload, label: "Import board as JSON", onRun: () => fileRef.current?.click() },
-    { icon: Eraser, label: "Clear board", onRun: clearBoard },
+    { icon: Eraser, label: "Clear board", onRun: () => setConfirmClearOpen(true) },
   ];
 
   return (

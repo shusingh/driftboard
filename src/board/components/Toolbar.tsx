@@ -1,5 +1,5 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { ArrowUpDown, Check, Eye, LayoutList, SlidersHorizontal } from "lucide-react";
+import { ArrowUpDown, Check, Eye, LayoutList, SlidersHorizontal, Trash2 } from "lucide-react";
 import { useBoardStore } from "../store/boardStore";
 import { useUiStore, type SortMode } from "../store/uiStore";
 import { labelStyle } from "../tokens";
@@ -32,6 +32,7 @@ export function Toolbar() {
   const labelFilter = useUiStore(state => state.labelFilter);
   const toggleLabelFilter = useUiStore(state => state.toggleLabelFilter);
   const clearLabelFilter = useUiStore(state => state.clearLabelFilter);
+  const setConfirmClearOpen = useUiStore(state => state.setConfirmClearOpen);
 
   const controlClass =
     "flex h-8 items-center gap-[6px] rounded-[9px] border border-line bg-surface px-3 text-[12.5px] font-semibold text-muted transition hover:text-ink";
@@ -142,6 +143,16 @@ export function Toolbar() {
       </DropdownMenu.Root>
 
       <JsonMenu />
+
+      <button
+        className="flex h-8 items-center gap-[6px] rounded-[9px] border border-line bg-surface px-3 text-[12.5px] font-semibold text-muted transition hover:border-secondary/40 hover:text-secondary"
+        title="Clear board"
+        type="button"
+        onClick={() => setConfirmClearOpen(true)}
+      >
+        <Trash2 className="h-[14px] w-[14px]" />
+        Clear
+      </button>
     </div>
   );
 }

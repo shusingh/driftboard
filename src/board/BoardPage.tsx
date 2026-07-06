@@ -4,6 +4,7 @@ import { Topbar } from "./components/Topbar";
 import { Toolbar } from "./components/Toolbar";
 import { Board } from "./components/Board";
 import { FocusBanner } from "./components/FocusBanner";
+import { ClearBoardDialog } from "./components/ClearBoardDialog";
 import { CardDetailPanel } from "./panel/CardDetailPanel";
 import { CommandPalette } from "./palette/CommandPalette";
 import { useKeyboardShortcuts } from "./useKeyboardShortcuts";
@@ -31,6 +32,7 @@ export default function BoardPage() {
       <Board />
       <CardDetailPanel />
       <CommandPalette />
+      <ClearBoardDialog />
     </div>
   );
 }

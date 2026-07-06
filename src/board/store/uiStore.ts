@@ -16,6 +16,7 @@ export type UiState = {
   search: string;
   selectedCardId: string | null;
   paletteOpen: boolean;
+  confirmClearOpen: boolean;
   collapsed: Record<string, boolean>;
 
   toggleTheme: () => void;
@@ -30,6 +31,7 @@ export type UiState = {
   selectCard: (cardId: string | null) => void;
   setPaletteOpen: (open: boolean) => void;
   togglePalette: () => void;
+  setConfirmClearOpen: (open: boolean) => void;
   toggleColumnCollapsed: (columnId: string) => void;
 };
 
@@ -52,6 +54,7 @@ export const useUiStore = create<UiState>()(
       search: "",
       selectedCardId: null,
       paletteOpen: false,
+      confirmClearOpen: false,
       collapsed: {},
 
       toggleTheme: () =>
@@ -93,6 +96,8 @@ export const useUiStore = create<UiState>()(
       setPaletteOpen: paletteOpen => set({ paletteOpen }),
 
       togglePalette: () => set(state => ({ paletteOpen: !state.paletteOpen })),
+
+      setConfirmClearOpen: confirmClearOpen => set({ confirmClearOpen }),
 
       toggleColumnCollapsed: columnId =>
         set(state => ({
