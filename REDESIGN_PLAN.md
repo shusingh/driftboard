@@ -19,7 +19,7 @@
 | 6 - Modes & polish | ✅ Done | Focus-mode banner with Exit; quiet theme-aware scrollbars; card-rise mount animation; reduced-motion honored; responsive topbar (wraps, hides non-essentials on small screens); focus rings on cards. |
 | 7 - Import/Export | ✅ Done | Export/import in palette **and** a toolbar JSON dropdown; zod-validated round-trip; inline error surface. |
 | 8 - Landing page | ✅ Done | Rebuilt from mock: sticky nav + theme toggle, hero with badge/trust-chips + static board preview, 9-feature grid, "private by default" section, footer. Old HeroUI landing + shared components (navbar/footer/primitives/icons/theme-switch/layout/ConfirmationModal/site config) deleted. |
-| 9 - Ship to Vercel | ✅ Done | **Deployed to production:** https://kanban-board-fawn-phi.vercel.app (`/` and `/board` both 200, GitHub repo connected, Vite auto-detected). Rebranded `index.html` + favicon + theme-color; README updated with live link; `vercel.json` SPA rewrite. **Optional follow-ups:** retire Render; rename repo folder `kanban-board` → `driftboard`. |
+| 9 - Ship to Vercel | ✅ Done | **Deployed to production:** https://driftboard-app.vercel.app (`/` and `/board` both 200, GitHub repo connected, Vite auto-detected). Rebranded `index.html` + favicon + theme-color; README updated with live link; `vercel.json` SPA rewrite. **Optional follow-ups:** retire Render; rename repo folder `kanban-board` → `driftboard`. |
 
 > **Note on authorship:** Phase 0 and the first cut of Phase 1 (types, migrations, seed, basic store) were completed in a separate Codex session; verified and extended here.
 

@@ -2,7 +2,7 @@
 
 A fast, **local-first** personal Kanban board. No signup, private by default, works offline. Your board lives entirely in your browser and never leaves your device.
 
-🌐 **Live:** [kanban-board-fawn-phi.vercel.app](https://kanban-board-fawn-phi.vercel.app)
+🌐 **Live:** [driftboard-app.vercel.app](https://driftboard-app.vercel.app)
 
 Built with React, TypeScript, Vite, Tailwind, dnd-kit, and Zustand.
 
