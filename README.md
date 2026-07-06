@@ -1,87 +1,70 @@
-# Kanban Board
+# Driftboard
 
-A modern, responsive Kanban board application built with React, TypeScript, and Vite. This project provides a clean and intuitive interface for managing tasks using the Kanban methodology.
+A fast, **local-first** personal Kanban board. No signup, private by default, works offline. Your board lives entirely in your browser and never leaves your device.
 
-🌐 **Live Demo:** [kanban-board-6ty7.onrender.com](https://kanban-board-6ty7.onrender.com)
+🌐 **Live:** [kanban-board-fawn-phi.vercel.app](https://kanban-board-fawn-phi.vercel.app)
+
+Built with React, TypeScript, Vite, Tailwind, dnd-kit, and Zustand.
 
 ## Features
 
-- 🎯 Drag and drop functionality for seamless task management
-- 💾 Local storage persistence for your boards
-- 🎨 Modern UI with HeroUI components
-- 📱 Responsive design that works on all devices
-- 🌙 Dark mode support
-- ⚡ Fast and performant with Vite
+- **Fluid drag & drop** — reorder cards within a column and move them across columns, plus drag to reorder columns (dnd-kit, with a lifted drag preview)
+- **Rich cards** — priority, colour-coded labels, due-date badges, checklist progress, notes, and an accent rail
+- **Card detail panel** — edit title, description, priority, due date, labels, checklist/subtasks, and move-to column
+- **Command palette (⌘K)** — new task, theme, focus, density, undo/redo, export/import, clear
+- **Keyboard shortcuts** — `⌘K`, `/` (search), `N`, `T`, `F`, `D`, `⌘Z` / `⇧⌘Z`
+- **Search, quick filters & sort** — filter by today / overdue / high priority / label; sort by priority, due, or title
+- **Focus mode** — dim everything but active work
+- **Light / dark themes** and **comfortable / compact** density
+- **Undo / redo** history and **import / export** to JSON (zod-validated)
+- **Local persistence** — auto-saved to `localStorage`
 
 ## Tech Stack
 
-- React 19
-- TypeScript
-- Vite
-- HeroUI Components
-- Tailwind CSS
-- @hello-pangea/dnd for drag and drop
-- React Router for navigation
+- React 18 + TypeScript + Vite
+- Tailwind CSS with a token-driven design system (warm-paper palette, Bricolage Grotesque)
+- [dnd-kit](https://dndkit.com/) for drag and drop
+- [Zustand](https://github.com/pmndrs/zustand) + [zundo](https://github.com/charkour/zundo) for state and undo/redo
+- Radix UI primitives + [cmdk](https://cmdk.paco.me/) for the palette
+- [zod](https://zod.dev/) for import validation
+- React Router
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (Latest LTS version recommended)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-
-```bash
-git clone [your-repo-url]
-cd kanban-board
-```
-
-2. Install dependencies
-
 ```bash
 npm install
-# or
-yarn install
-```
-
-3. Start the development server
-
-```bash
 npm run dev
-# or
-yarn dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+Open `http://localhost:5173` for the landing page, or `http://localhost:5173/board` for the board.
 
-## Available Scripts
+## Scripts
 
-- `npm run dev` - Start the development server
-- `npm run build` - Build the project for production
-- `npm run preview` - Preview the production build locally
-- `npm run lint` - Run ESLint to check code quality
+- `npm run dev` — start the dev server
+- `npm run build` — type-check and build for production (`dist/`)
+- `npm run preview` — preview the production build
+- `npm run lint` — run ESLint (zero-warning policy)
 
 ## Project Structure
 
 ```
 src/
-├── components/     # Reusable UI components
-├── pages/         # Page components
-├── layouts/       # Layout components
-├── types/         # TypeScript type definitions
-├── utils/         # Utility functions
-├── data/          # Default data and constants
-├── styles/        # Global styles
-└── config/        # Configuration files
+├── board/         # Board screen
+│   ├── components/ # Topbar, Toolbar, Board, Column, Card, dnd wrappers
+│   ├── panel/      # Card detail side-panel
+│   ├── palette/    # ⌘K command palette
+│   └── store/      # Zustand board + ui stores, migrations
+├── landing/       # Marketing landing page
+├── lib/           # utils, date helpers, JSON I/O, zod schema
+├── data/          # Seed board
+├── types/         # Type definitions
+└── styles/        # Global styles + design tokens
 ```
 
-## Contributing
+## Deployment
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Deploys as a static Vite build on **Vercel** (`npm run build` → `dist`). `vercel.json` rewrites all routes to `index.html` for client-side routing.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT — see [LICENSE](LICENSE).

@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "./pages/LandingPage/LandingPage";
-import KanbanBoard from "./pages/KanbanBoard/KanbanBoard";
-import "./styles/scrollbar.css";
+import LandingPage from "./landing/LandingPage";
+import BoardPage from "./board/BoardPage";
 
 /**
  * App component that serves as the root component and router for the application
@@ -13,7 +12,7 @@ function App() {
   return (
     <Routes>
       <Route element={<LandingPage />} path="/" />
-      <Route element={<KanbanBoard />} path="/kanban-board" />
+      <Route element={<BoardPage />} path="/board" />
     </Routes>
   );
 }
