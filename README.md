@@ -8,16 +8,16 @@ Built with React, TypeScript, Vite, Tailwind, dnd-kit, and Zustand.
 
 ## Features
 
-- **Fluid drag & drop** — reorder cards within a column and move them across columns, plus drag to reorder columns (dnd-kit, with a lifted drag preview)
-- **Rich cards** — priority, colour-coded labels, due-date badges, checklist progress, notes, and an accent rail
-- **Card detail panel** — edit title, description, priority, due date, labels, checklist/subtasks, and move-to column
-- **Command palette (⌘K)** — new task, theme, focus, density, undo/redo, export/import, clear
-- **Keyboard shortcuts** — `⌘K`, `/` (search), `N`, `T`, `F`, `D`, `⌘Z` / `⇧⌘Z`
-- **Search, quick filters & sort** — filter by today / overdue / high priority / label; sort by priority, due, or title
-- **Focus mode** — dim everything but active work
+- **Fluid drag & drop** - reorder cards within a column and move them across columns, plus drag to reorder columns (dnd-kit, with a lifted drag preview)
+- **Rich cards** - priority, colour-coded labels, due-date badges, checklist progress, notes, and an accent rail
+- **Card detail panel** - edit title, description, priority, due date, labels, checklist/subtasks, and move-to column
+- **Command palette (⌘K)** - new task, theme, focus, density, undo/redo, export/import, clear
+- **Keyboard shortcuts** - `⌘K`, `/` (search), `N`, `T`, `F`, `D`, `⌘Z` / `⇧⌘Z`
+- **Search, quick filters & sort** - filter by today / overdue / high priority / label; sort by priority, due, or title
+- **Focus mode** - dim everything but active work
 - **Light / dark themes** and **comfortable / compact** density
 - **Undo / redo** history and **import / export** to JSON (zod-validated)
-- **Local persistence** — auto-saved to `localStorage`
+- **Local persistence** - auto-saved to `localStorage`
 
 ## Tech Stack
 
@@ -40,10 +40,10 @@ Open `http://localhost:5173` for the landing page, or `http://localhost:5173/boa
 
 ## Scripts
 
-- `npm run dev` — start the dev server
-- `npm run build` — type-check and build for production (`dist/`)
-- `npm run preview` — preview the production build
-- `npm run lint` — run ESLint (zero-warning policy)
+- `npm run dev` - start the dev server
+- `npm run build` - type-check and build for production (`dist/`)
+- `npm run preview` - preview the production build
+- `npm run lint` - run ESLint (zero-warning policy)
 
 ## Project Structure
 
@@ -67,4 +67,4 @@ Deploys as a static Vite build on **Vercel** (`npm run build` → `dist`). `verc
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT - see [LICENSE](LICENSE).
